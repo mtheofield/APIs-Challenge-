@@ -2,7 +2,7 @@
 
 Using JavaScript we created a imed coding quiz with multiple-choice questions.  
 
-![Image of quiz](Javascript Quiz.png)
+![Image of quiz](https://mtheofield.github.io/APIs-Challenge-/)
 
 ## Purpose 
 This allows coding boot camp students to take a timed quiz on JavaScript fundamentals that stores high scores so that they can gauge on their progress compared to their peers.
