@@ -2,7 +2,7 @@
 
 Using JavaScript we created a imed coding quiz with multiple-choice questions.  
 
-![Image of quiz](images/Javascript Quiz.jpg)
+![Image of quiz](Javascript Quiz.jpg)
 
 ## Purpose 
 This allows coding boot camp students to take a timed quiz on JavaScript fundamentals that stores high scores so that they can gauge on their progress compared to their peers.
