@@ -14,14 +14,13 @@ var answer3 = document.getElementById("answer3");
 var answer4 = document.getElementById("answer4");
 
 var checkChoice = document.getElementById("checkChoice");
-var scoreBoard = document.getElementById("submit_page");
+var ScoreList = document.getElementById("submit_page");
 var finalScore = document.getElementById("final_score");
 var userInitial =document.getElementById("initial");
 
 var submitBtn =document.getElementById("submit");
 var highScores =document.getElementById("highscores");
 var scoreRecord =document.getElementById("score_record");
-var scoreCheck =document.getElementById("score");
 var done =document.getElementById("finish");
 
 var secondsLeft = 60;
@@ -94,13 +93,13 @@ function startQuiz () {
       
 }
 //present the questions and answers
-function showQuestion () {
-        askQuestion.textContent = questionArray[questionIndex].question;
-        answer1.textContent = questionArray[questionIndex].choices[0];
-        answer2.textContent = questionArray[questionIndex].choices[1];
-        answer3.textContent = questionArray[questionIndex].choices[2];
-        answer4.textContent = questionArray[questionIndex].choices[3];
-    
+function showQuestion (x) {
+        askQuestion.textContent = questionArray[x].question;
+        answer1.textContent = questionArray[x].choices[0];
+        answer2.textContent = questionArray[x].choices[1];
+        answer3.textContent = questionArray[x].choices[2];
+        answer4.textContent = questionArray[x].choices[3];
+        questionIndex= x
     }
 
 //checking to see if right or wrong answer was clicked and adding points to score
@@ -132,13 +131,13 @@ questionCount++;
 function gameOver() {
 
         questionPage.style.display = "none";
-        scoreBoard.style.display = "block";
-        console.log(scoreBoard);
+        ScoreList.style.display = "block";
+        console.log(ScoreList);
         finalScore.textContent = "Final score :" + totalScore ;  
         timeLeft.style.display = "none"; 
 };
 
-//local storage and users initials for scoreboard
+//local storage and users initials for score list 
 function getScore () {
     var currentList =localStorage.getItem("ScoreList");
     if (currentList !== null ){
@@ -203,7 +202,7 @@ choiceButtons.forEach(function(click){
 
 submitBtn.addEventListener("click", function(event) {
     event.preventDefault();
-    scoreBoard.style.display = "none";
+    ScoreList.style.display = "none";
     openingPage.style.display = "none";
     highScores.style.display = "block";
     questionPage.style.display ="none";
